@@ -1,0 +1,3 @@
+sopinet_template_sbadmin2_homepage:
+    path:  /hello/{name}
+    defaults: { _controller: SopinetTemplateSbadmin2Bundle:Default:index }
