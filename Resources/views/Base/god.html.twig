@@ -9,9 +9,11 @@
     {% block css %}
 	   	{% stylesheets
 	   		'@SopinetTemplateSbadmin2Bundle/Resources/public/css/bootstrap.min.css'
+	   		'@SopinetTemplateSbadmin2Bundle/Resources/public/font-awesome/css/font-awesome.css'
 	    	'@SopinetTemplateSbadmin2Bundle/Resources/public/css/plugins/morris/morris-0.4.3.min.css'
 	    	'@SopinetTemplateSbadmin2Bundle/Resources/public/css/plugins/timeline/timeline.css'
 	    	'@SopinetTemplateSbadmin2Bundle/Resources/public/css/sb-admin.css'
+	    	'bundles/sopinettemplatesbadmin2/font-awesome/css/font-awesome.min.css'
 	    	output='css/*.css' filter='cssrewrite' %}
 	    	<link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
 		{% endstylesheets %}
@@ -27,13 +29,14 @@
 
 {% block js %}
 	{% javascripts 
-		'@SopinetTemplateEndlessAdminBundle/Resources/public/js/jquery-1.10.2.js'
-		'@SopinetTemplateEndlessAdminBundle/Resources/public/js/bootstrap.min.js'
-		'@SopinetTemplateEndlessAdminBundle/Resources/public/js/plugins/metisMenu/jquery.metisMenu.js'
-		'@SopinetTemplateEndlessAdminBundle/Resources/public/js/plugins/morris/raphael-2.1.0.min.js'
-		'@SopinetTemplateEndlessAdminBundle/Resources/public/js/plugins/morris/morris.js'
-		'@SopinetTemplateEndlessAdminBundle/Resources/public/js/sb-admin.js'
-		'@SopinetTemplateEndlessAdminBundle/Resources/public/js/demo/dashboard-demo.js'
+		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/jquery-1.10.2.js'
+		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/bootstrap.min.js'
+		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/plugins/metisMenu/jquery.metisMenu.js'
+		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/plugins/morris/raphael-2.1.0.min.js'
+		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/plugins/morris/morris.js'
+		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/sb-admin.js'
+		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/demo/dashboard-demo.js'
+		
 	%}
 	<script type="text/javascript" src="{{ asset_url }}"></script>
 	
