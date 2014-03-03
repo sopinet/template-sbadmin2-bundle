@@ -1,0 +1,48 @@
+{% if csrf_token is not defined %}
+	{% set csrf_token = render(controller('SopinetTemplateSbadmin2Bundle:Default:getToken')) %}
+{% endif %}
+
+<form action="{{ path("fos_user_security_check") }}" method="post">
+	<input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+	
+    {% if (redirect is defined) %}
+    	<input type="hidden" name="_redirect" id="redirect" value="{{ redirect }} "/>
+    {% endif %}	
+	<h1>{{ "Login"|trans }}</h1>		
+	
+	<div class="login-fields">
+		
+		<p>{{ "Login.desc"|trans }}:</p>
+		
+		<div class="field">
+			<label for="username">{{ "Username"|trans }}:</label>
+			<input type="text" id="username" value="" name="_username" placeholder="Username" class="form-control input-lg username-field" />
+		</div> <!-- /field -->
+		
+		<div class="field">
+			<label for="password">{{ "Password"|trans }}:</label>
+			<input type="password" id="password" value="" name="_password" placeholder="Password" class="form-control input-lg password-field"/>
+		</div> <!-- /password -->
+		
+	</div> <!-- /login-fields -->
+	
+	<div class="login-actions">
+							
+		<button class="login-action btn btn-primary">{{ "Login.signin"|trans }}</button>
+		
+	</div> <!-- .actions -->
+	
+	<!-- 
+	<div class="login-social">
+		<p>Sign in using social network:</p>
+		
+		<div class="twitter">
+			<a href="#" class="btn_1">Login with Twitter</a>				
+		</div>
+		
+		<div class="fb">
+			<a href="#" class="btn_2">Login with Facebook</a>				
+		</div>
+	</div>
+	-->
+</form>

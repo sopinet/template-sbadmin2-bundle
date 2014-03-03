@@ -10,4 +10,10 @@ class DefaultController extends Controller
     {
         return $this->render('SopinetTemplateSbadmin2Bundle:Default:index.html.twig', array('name' => $name));
     }
+    
+    public function getTokenAction()
+    {
+    	return new Response($this->container->get('form.csrf_provider')
+    			->generateCsrfToken('authenticate'));
+    }    
 }

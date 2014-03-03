@@ -1,0 +1,25 @@
+{% extends "SopinetTemplateSbadmin2Bundle:Base:god.html.twig" %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Please Sign In</h3>
+                    </div>
+                    <div class="panel-body">
+					    {% if error %}
+					        <div>{{ error|trans({}, 'FOSUserBundle') }}</div>
+					    {% endif %}
+							
+							{% block fos_user_content %}
+							{% endblock fos_user_content %}			
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
