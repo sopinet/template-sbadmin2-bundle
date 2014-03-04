@@ -42,11 +42,12 @@
 		
 	%}
 	<script type="text/javascript" src="{{ asset_url }}"></script>
-	{###################################################}
 
+	{###################################################}
 	{% if app.environment == 'translation' %}
 		<script>
-		    var phrase_auth_token = '5de9fb0c22272598e06b18ff8d5528a6';
+
+		    var phrase_auth_token = '5de9fb0c22272598e06b18ff8d5528a60';
 		    (function() {
 		        var phraseapp = document.createElement('script'); phraseapp.type = 'text/javascript'; phraseapp.async = true;
 		        phraseapp.src = ['https://', 'phraseapp.com/assets/phrase/0.1/app.js?', new Date().getTime()].join('');
@@ -54,7 +55,6 @@
 		    })();
 		</script>
 	{% endif %}
-	
 	{###################################################}
 	{% endjavascripts %}
 {% endblock %}
