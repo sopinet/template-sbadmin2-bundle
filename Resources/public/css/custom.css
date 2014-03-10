@@ -1,0 +1,6 @@
+@import url('../sb-admin.cs');
+
+.currentGroups ul li{
+	
+	list-style-type:none;
+}

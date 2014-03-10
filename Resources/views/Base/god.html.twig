@@ -4,8 +4,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Start Bootstrap - SB Admin Version 2.0 Demo{% endblock %}</title>
-    
     {#<link rel="shortcut icon" href="http://work.sopinet.es/icofrade-web/web/uploads/favicon.ico" />#}
+    
+    {% block csss %}
+    {% endblock %}
+    
     {% block css %}
 	   	{% stylesheets
 	   		'@SopinetTemplateSbadmin2Bundle/Resources/public/css/bootstrap.min.css'
@@ -13,12 +16,12 @@
 	    	'@SopinetTemplateSbadmin2Bundle/Resources/public/css/plugins/morris/morris-0.4.3.min.css'
 	    	'@SopinetTemplateSbadmin2Bundle/Resources/public/css/plugins/timeline/timeline.css'
 	    	'@SopinetTemplateSbadmin2Bundle/Resources/public/css/sb-admin.css'
+	    	'@SopinetTemplateSbadmin2Bundle/Resources/public/css/custom.css'
 	    	'bundles/sopinettemplatesbadmin2/font-awesome/css/font-awesome.min.css'
 	    	output='css/*.css' filter='cssrewrite' %}
 	    	<link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
 		{% endstylesheets %}
     {% endblock %}
-
 </head>
 
 
@@ -39,6 +42,7 @@
 		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/plugins/morris/morris.js'
 		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/sb-admin.js'
 		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/demo/dashboard-demo.js'
+		'bundles/jmstranslation/js/jquery.js'
 		
 	%}
 	<script type="text/javascript" src="{{ asset_url }}"></script>
