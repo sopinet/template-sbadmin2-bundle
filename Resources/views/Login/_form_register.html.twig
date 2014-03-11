@@ -16,7 +16,7 @@
 		{{ form_widget(form.username, {'attr': {'class': 'form-control', 'placeholder': 'Register.name'}}) }}
         {% if form.username.vars.errors[0].message is defined %}
         	<span class="help-block">
-                {{ form.username.vars.errors[0].message }}
+                {{ form.username.vars.errors[0].message|trans }}
             </span>
         {% endif %}
     </div>
@@ -24,7 +24,7 @@
 		{{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control', 'placeholder': 'Register.pass'}}) }}
         {% if form.plainPassword.first.vars.errors[0].message is defined %}
         	<span class="help-block">
-            	{{ form.plainPassword.first.vars.errors[0].message }}
+            	{{ form.plainPassword.first.vars.errors[0].message|trans }}
             </span>
         {% endif %}
     </div>
@@ -32,7 +32,7 @@
 		{{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control', 'placeholder': 'Register.repeatpass'}}) }}
         {% if form.plainPassword.second.vars.errors[0].message is defined %}
 	        <span class="help-block">
-	        	{{ form.plainPassword.second.vars.errors[0].message }}
+	        	{{ form.plainPassword.second.vars.errors[0].message|trans }}
 	        </span>
         {% endif %}
     </div>
