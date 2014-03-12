@@ -1,0 +1,14 @@
+{% block form_row %}
+{% spaceless %}
+    <div class="form-group">
+        {{ form_label(form, label|default(null)) }}
+        {{ form_errors(form) }}
+		
+		{% if (form.vars.attr.class is defined) %}
+			{{ form_widget(form, {'attr': {'class': 'form-control '~form.vars.attr.class}}) }}
+		{% else %}
+			{{ form_widget(form, {'attr': {'class': 'form-control'}}) }}
+		{% endif %}
+	</div>
+{% endspaceless %}
+{% endblock form_row %}

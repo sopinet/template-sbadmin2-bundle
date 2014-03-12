@@ -20,6 +20,21 @@
 		<input type="password" id="password" value="" name="_password" placeholder="Password" class="form-control" required="required" />
 	</div> <!-- /password -->
 	
-	<button class="btn btn-lg btn-success btn-block">{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}</button>
-	
+	<div class="form-group">
+		<button class="btn btn-lg btn-success btn-block">{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}</button>
+	</div>
+	<hr>
+	<div class="form-group">		
+	{#<a href="{{ hwi_oauth_login_url('google') }}" class="btn btn-block btn-social btn-google-plus">#}
+		<a href="#" class="btn btn-block btn-social btn-google-plus">
+			<i class="fa fa-google-plus"></i> Sign in with Google
+        </a>
+    </div>
+    
+    <div class="form-group">
+		{#<a href="{{ hwi_oauth_login_url('facebook') }}" class="btn btn-block btn-social btn-facebook">#}
+		<a href="#" class="btn btn-block btn-social btn-facebook">
+        	<i class="fa fa-facebook"></i> Sign in with Facebook
+       	</a>
+    </div>
 </form>
