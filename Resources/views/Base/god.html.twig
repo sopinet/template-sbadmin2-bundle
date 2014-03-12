@@ -16,6 +16,7 @@
 	    	'@SopinetTemplateSbadmin2Bundle/Resources/public/css/plugins/social-buttons/social-buttons.css'
 	    	'@SopinetTemplateSbadmin2Bundle/Resources/public/css/sb-admin.css'
 	    	'@SopinetTemplateSbadmin2Bundle/Resources/public/css/custom.css'
+	    	'@SopinetTemplateSbadmin2Bundle/Resources/public/css/chosen.css'
 	    	'bundles/sopinettemplatesbadmin2/font-awesome/css/font-awesome.min.css'
 	    	output='css/*.css' filter='cssrewrite' %}
 	    	<link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
@@ -41,11 +42,23 @@
 		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/plugins/morris/morris.js'
 		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/sb-admin.js'
 		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/demo/dashboard-demo.js'
+		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/chosen.jquery.js'
 		'bundles/jmstranslation/js/jquery.js'
 		
 	%}
 	<script type="text/javascript" src="{{ asset_url }}"></script>
-
+	<script type="text/javascript">
+    var config = {
+      '.chosen-select'           : {},
+      '.chosen-select-deselect'  : {allow_single_deselect:true},
+      '.chosen-select-no-single' : {disable_search_threshold:10},
+      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+      '.chosen-select-width'     : {width:"95%"}
+    }
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+  </script>
 	{% endjavascripts %}
 {% endblock %}
     
