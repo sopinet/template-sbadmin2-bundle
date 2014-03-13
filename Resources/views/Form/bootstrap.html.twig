@@ -1,14 +1,23 @@
 {% block form_row %}
 {% spaceless %}
-    <div class="form-group">
-        {{ form_label(form, label|default(null)) }}
-        {{ form_errors(form) }}
-		
-		{% if (form.vars.attr.class is defined) %}
-			{{ form_widget(form, {'attr': {'class': 'form-control '~form.vars.attr.class}}) }}
-		{% else %}
-			{{ form_widget(form, {'attr': {'class': 'form-control'}}) }}
-		{% endif %}
+<div class="row">
+	<div class="col-md-6">
+	    <div class="form-group">
+	        {{ form_errors(form) }}
+			
+			{% if (form.vars.attr.class is defined) %}
+				{{ form_widget(form, {'attr': {'class': 'form-control '~form.vars.attr.class}}) }}
+			{% else %}
+				{{ form_widget(form, {'attr': {'class': 'form-control'}}) }}
+			{% endif %}
+		</div>
 	</div>
+</div>
 {% endspaceless %}
 {% endblock form_row %}
+
+{% block button_widget %}
+{% spaceless %}
+<button type="button" class="btn btn-outline btn-success">{{ "Btn.success"|trans }}</button>
+{% endspaceless %}
+{% endblock %}
