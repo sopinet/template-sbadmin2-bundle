@@ -1,7 +1,8 @@
 $(function() {
+	
+   // $('#side-menu').metisMenu();
 
-    $('#side-menu').metisMenu();
-
+		 $('.inputDate').datepicker();
 });
 
 //Loads the correct sidebar on window load,
