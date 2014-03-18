@@ -4,6 +4,7 @@
 
  body {
     background-color: #f8f8f8;
+    padding-top: 50px;
 }
 
 /* Wrappers */
@@ -129,6 +130,12 @@
     .navbar-static-side {
         z-index: 1;
         position: absolute;
+        width: 250px;
+    }
+    
+    .navbar-fixed-side {
+        z-index: 1;
+        position: fixed;
         width: 250px;
     }
 
