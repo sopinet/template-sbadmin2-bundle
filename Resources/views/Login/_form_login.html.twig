@@ -8,29 +8,23 @@
     {% if (redirect is defined) %}
     	<input type="hidden" name="_redirect" id="redirect" value="{{ redirect }} "/>
     {% endif %}	
-	<h1>{{ "Login"|trans }}</h1>		
+   	{% if error %}
+    	<div class="help-block">{{ error|trans({}, 'FOSUserBundle') }}</div>
+	{% endif %}
 	
-	<div class="login-fields">
+	<div class="form-group">
+		<input type="text" id="username" value="{{ last_username }}" name="_username" placeholder="Username" class="form-control" required="required" autofocus />
+	</div> <!-- /form-group -->
 		
-		<p>{{ "Login.desc"|trans }}:</p>
-		
-		<div class="field">
-			<label for="username">{{ "Username"|trans }}:</label>
-			<input type="text" id="username" value="" name="_username" placeholder="Username" class="form-control input-lg username-field" />
-		</div> <!-- /field -->
-		
-		<div class="field">
-			<label for="password">{{ "Password"|trans }}:</label>
-			<input type="password" id="password" value="" name="_password" placeholder="Password" class="form-control input-lg password-field"/>
-		</div> <!-- /password -->
-		
-	</div> <!-- /login-fields -->
+	<div class="form-group">
+		<input type="password" id="password" value="" name="_password" placeholder="Password" class="form-control" required="required" />
+	</div> <!-- /password -->
 	
 			{#<a href="{{ hwi_oauth_login_url('facebook') }}">Connect with Facebook</a>#}
 	
 	<div class="login-actions">
 							
-		<button class="login-action btn btn-primary">{{ "Login.signin"|trans }}</button>
+		<button class="login-action btn btn-primary" name="submitLogin">{{ "Login.signin"|trans }}</button>
 		
 	</div> <!-- .actions -->
 	
@@ -45,6 +39,23 @@
 		<div class="fb">
 			<a href="#" class="btn_2">Login with Facebook</a>				
 		</div>
+=======
+	<div class="form-group">
+		<button class="btn btn-lg btn-success btn-block">{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}</button>
+>>>>>>> 692a73e8f9220058e40211a1ace10e4ff4b702bc
 	</div>
-	-->
+	<hr>
+	<div class="form-group">		
+	{#<a href="{{ hwi_oauth_login_url('google') }}" class="btn btn-block btn-social btn-google-plus">#}
+		<a href="#" class="btn btn-block btn-social btn-google-plus">
+			<i class="fa fa-google-plus"></i> Sign in with Google
+        </a>
+    </div>
+    
+    <div class="form-group">
+		{#<a href="{{ hwi_oauth_login_url('facebook') }}" class="btn btn-block btn-social btn-facebook">#}
+		<a href="#" class="btn btn-block btn-social btn-facebook">
+        	<i class="fa fa-facebook"></i> Sign in with Facebook
+       	</a>
+    </div>
 </form>

@@ -1,0 +1,40 @@
+{% if csrf_token is not defined %}
+	{% set csrf_token = render(controller('SopinetTemplateSbadmin2Bundle:Default:getToken')) %}
+{% endif %}
+
+<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register" role="form">
+    {{ form_errors(form) }}
+    <div class="form-group{% if form.email.vars.errors[0].message is defined %} has-error{% endif %}">
+		{{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Register.email'}}) }}
+            {% if form.email.vars.errors[0].message is defined %}
+            <span class="help-block">
+                {{ form.email.vars.errors[0].message }}
+            </span>
+        {% endif %}
+    </div>
+    <div class="form-group{% if form.username.vars.errors[0].message is defined %} has-error{% endif %}">
+		{{ form_widget(form.username, {'attr': {'class': 'form-control', 'placeholder': 'Register.name'}}) }}
+        {% if form.username.vars.errors[0].message is defined %}
+        	<span class="help-block">
+                {{ form.username.vars.errors[0].message|trans }}
+            </span>
+        {% endif %}
+    </div>
+    <div class="form-group{% if form.plainPassword.first.vars.errors[0].message is defined %} has-error{% endif %}">
+		{{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control', 'placeholder': 'Register.pass'}}) }}
+        {% if form.plainPassword.first.vars.errors[0].message is defined %}
+        	<span class="help-block">
+            	{{ form.plainPassword.first.vars.errors[0].message|trans }}
+            </span>
+        {% endif %}
+    </div>
+    <div class="form-group{% if form.plainPassword.second.vars.errors[0].message is defined %} has-error{% endif %}">
+		{{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control', 'placeholder': 'Register.repeatpass'}}) }}
+        {% if form.plainPassword.second.vars.errors[0].message is defined %}
+	        <span class="help-block">
+	        	{{ form.plainPassword.second.vars.errors[0].message|trans }}
+	        </span>
+        {% endif %}
+    </div>
+    <button class="btn btn-lg btn-success btn-block" type="submit">{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}</button>
+{{ form_end(form) }}
