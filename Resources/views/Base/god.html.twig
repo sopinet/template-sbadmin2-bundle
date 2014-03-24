@@ -45,11 +45,17 @@
 		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/chosen.jquery.js'
 		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/bootstrap-datepicker.js'
 
+		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/bootstrap-tooltip.js'
+		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/bootstrap-confirmation.js'
+
 		
 	%}
 	<script type="text/javascript" src="{{ asset_url }}"></script>
 	{% endjavascripts %}
 	
+	<script type="text/javascript">
+		$('[data-toggle="confirmation"]').confirmation('href');
+	</script>
 {% endblock %}
     
 </body>
