@@ -17,6 +17,7 @@
 	    	'@SopinetTemplateSbadmin2Bundle/Resources/public/css/custom.css'
 	    	'@SopinetTemplateSbadmin2Bundle/Resources/public/css/chosen.css'
 	    	'@SopinetTemplateSbadmin2Bundle/Resources/public/css/datepicker.css'
+	    	'@SopinetTemplateOpenMapBundle/Resources/public/css/leaflet.css'
 	    	'@FOSCommentBundle/Resources/assets/css/comments.css'
 	    	'bundles/sopinettemplatesbadmin2/font-awesome/css/font-awesome.min.css'
 	    	output='css/*.css' filter='cssrewrite' %}
@@ -52,7 +53,7 @@
 		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/demo/dashboard-demo.js'
 		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/chosen.jquery.js'
 		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/bootstrap-datepicker.js'
-
+		'@SopinetTemplateOpenMapBundle/Resources/public/js/leaflet.js'
 		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/bootstrap-tooltip.js'
 		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/bootstrap-confirmation.js'
 		
@@ -60,9 +61,15 @@
 
 	<script type="text/javascript" src="{{ asset_url }}"></script>
 	{% endjavascripts %}
-	
 	<script type="text/javascript">
 		$('[data-toggle="confirmation"]').confirmation('href');
+		
+		/* Leaflet configuration*/ 
+		var map = L.map('map').setView([37.8938548, -4.788015299999984], 13);
+		L.tileLayer('http://{s}.tile.cloudmade.com/8ee2a50541944fb9bcedded5165f09d9/997/256/{z}/{x}/{y}.png', {
+		    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+		}).addTo(map);
+		var marker = L.marker([37.8938548, -4.788015299999984]).addTo(map);
 	</script>
 {% endblock %}
     
