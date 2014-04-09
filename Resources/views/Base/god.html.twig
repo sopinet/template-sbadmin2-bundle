@@ -17,14 +17,22 @@
 	    	'@SopinetTemplateSbadmin2Bundle/Resources/public/css/custom.css'
 	    	'@SopinetTemplateSbadmin2Bundle/Resources/public/css/chosen.css'
 	    	'@SopinetTemplateSbadmin2Bundle/Resources/public/css/datepicker.css'
+	    	'@FOSCommentBundle/Resources/assets/css/comments.css'
 	    	'bundles/sopinettemplatesbadmin2/font-awesome/css/font-awesome.min.css'
 	    	output='css/*.css' filter='cssrewrite' %}
 	    	<link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
 		{% endstylesheets %}
+		{% if colorFont is not defined %}
+			{% set colorFont="428bca" %}
+			{% set colorBack="f8f8f8" %}
+		{% endif %}
+		{% include 'SopinetTemplateSbadmin2Bundle:Base:color.html.twig' with {
+			'colorFont': colorFont,
+			'colorBack': colorBack
+			}
+		%}
     {% endblock %}
 </head>
-
-
 
 <div id="wrapper">
 	{% block custombody %}<body>{% endblock %}
@@ -35,7 +43,7 @@
 
 {% block js %}
 	{% javascripts 
-		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/jquery-1.10.2.js'
+		
 		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/bootstrap.min.js'
 		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/plugins/metisMenu/jquery.metisMenu.js'
 		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/plugins/morris/raphael-2.1.0.min.js'
@@ -47,9 +55,9 @@
 
 		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/bootstrap-tooltip.js'
 		'@SopinetTemplateSbadmin2Bundle/Resources/public/js/bootstrap-confirmation.js'
-
 		
 	%}
+
 	<script type="text/javascript" src="{{ asset_url }}"></script>
 	{% endjavascripts %}
 	
