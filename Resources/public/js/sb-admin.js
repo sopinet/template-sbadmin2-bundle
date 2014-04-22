@@ -8,6 +8,12 @@ $(function() {
 		 //Popover
 		 $("[data-toggle=popover]").popover();
 		 
+		// Tooltip
+	     $("[rel=tooltip-right]").tooltip({ placement: 'right'});
+	     $("[rel=tooltip-left]").tooltip({ placement: 'left'});
+	     $("[rel=tooltip-top]").tooltip({ placement: 'top'});
+	     $("[rel=tooltip-bottom]").tooltip({ placement: 'bottom'});
+		 
 		 // Listing matches countries while typing
 		    var config = {
 		    	      '.chosen-select'           : {},
