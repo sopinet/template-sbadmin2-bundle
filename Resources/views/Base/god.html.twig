@@ -60,7 +60,7 @@
 	<script type="text/javascript" src="{{ asset_url }}"></script>
 	{% endjavascripts %}
 	<script type="text/javascript">
-		$('[data-toggle="confirmation"]').confirmation('href');
+		$('[data-toggle="confirmation"]').confirmation({popout: true, singleton: true});
 	</script>
 {% endblock %}
     
