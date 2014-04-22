@@ -7,6 +7,9 @@
     padding-top: 50px;
 }
 
+a:hover {
+	text-decoration:none;
+}
 /* Wrappers */
 
 /* ------------------------------- */
@@ -17,7 +20,7 @@
 
 #page-wrapper {
     padding: 0 15px;
-    
+    margin-left:60px;
     background-color: #fff;
 }
 
@@ -35,6 +38,22 @@
 }
 
 /* Navigation */
+
+.navbar-fixed-side, #side-menu  {
+	width: 60px !important;
+}
+.navbar-fixed-top a, #side-menu a {
+	color: #3c763d !important;
+}
+#side-menu li:first-child {
+	
+	margin-top:10px;
+}
+#side-menu li {
+	margin-bottom:8px;
+	padding-bottom:5px;
+	margin-top:10px;
+}
 
 /* ------------------------------- */
 

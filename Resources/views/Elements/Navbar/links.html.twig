@@ -4,13 +4,13 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="{{ path('panel_profile') }}"><i class="fa fa-user fa-fw"></i> {{ "Navbar.profile"|trans }}</a>
+                        <li><a href="{{ path('panel_profile') }}"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
                         <!-- TODO: Comprobar si panel_user_settings está definido o definirlo -->
-                        <li><a href="{{ path('panel_user_settings') }}"><i class="fa fa-gear fa-fw"></i> {{ "Navbar.settings"|trans }}</a>
+                        <li><a href="{{ path('panel_user_settings') }}"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="{{ path('fos_user_security_logout') }}"><i class="fa fa-sign-out fa-fw"></i> {{ "Navbar.logout"|trans }}</a>
+                        <li><a href="{{ path('fos_user_security_logout') }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
