@@ -2,8 +2,22 @@
 
 {% block title %}Login{% endblock %}
 
+ {% block css %}
+	   	{% stylesheets
+			'bundles/sopinettemplatelanding/css/font-awesome.css'
+	   		'@SopinetTemplateLandingBundle/Resources/public/css/bootstrap.css'
+	   		'@SopinetTemplateLandingBundle/Resources/public/css/style.css'
+	    	output='css/*.css' filter='cssrewrite' %}
+	    	<link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+		{% endstylesheets %}
+{% endblock %}
+
 {% block body %}
-    <div class="container">
+
+<img class="img-responsive pull-right" src="{{ asset('bundles/sopinettemplatelanding//img/banner.jpg') }}" alt="Trazeo" />
+<img class="img-responsive" style="position:absolute;margin-top:250px;" width="200" height="200" src="{{ asset('bundles/sopinettemplatelanding//img/trazeo_icon_bg_trans.png') }}" alt="Trazeo" />
+        <div class="container">
+            <br /><br /><br />
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
@@ -21,5 +35,8 @@
                 </div>
             </div>
         </div>
+        <br /><br />
     </div>
+    {% embed "SopinetTemplateLandingBundle:Base:footer.html.twig" %}
+    {% endembed %}
 {% endblock %}
