@@ -6,7 +6,7 @@ $(function() {
 		 });
 		 
 		 //Popover
-		 $("[data-toggle=popover]").popover();
+		 $("[data-toggle=popover]").popover({ trigger: "hover focus" });
 		 
 		// Tooltip
 	     $("[rel=tooltip-right]").tooltip({ placement: 'right'});
