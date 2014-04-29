@@ -11,7 +11,7 @@
 	font-family:Asap;
 }
 
-table a {
+table a, .currentGroups a {
 	
 	color:#3c763d !important;
 }
@@ -30,6 +30,11 @@ a:hover {
     padding: 0 15px;
     margin-left:60px;
     background-color: #fff;
+}
+
+.page-header {
+	
+	background:url('../../../images/trazeito_big.png') no-repeat 90% 86%;
 }
 
 @media(min-width:768px) {
