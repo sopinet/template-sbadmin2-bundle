@@ -10,8 +10,8 @@
 </table>
 	{% for notification in notifications %}
 		<tr class="well">
-			<td width="20%">{{ notificaftion.Action }}</td>
-			<td><a href="{{ path(notification.Link)) }}"></a></td>
+			<td width="20%">{{ notification.Action }}</td>
+			<td><a href="{{ path('panel_group') }}"></a></td>
 		</tr>
 	{% endfor %}
 <table>
