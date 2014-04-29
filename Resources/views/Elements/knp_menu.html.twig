@@ -64,7 +64,7 @@
         {%- set attributes = attributes|merge({'class': classes|join(' ')}) %}
     {%- endif %}
 {# displaying the item #}
-    <li>
+    <li {% if item.attribute('tooltip') is not empty  %} rel="tooltip-right" title="{{ item.attribute('tooltip')|trans }}"{% endif %}>
         {%- if item.uri is not empty and (not item.current or options.currentAsLink) %}
         {{ block('linkElement') }}
         {%- else %}

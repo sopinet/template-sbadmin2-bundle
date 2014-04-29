@@ -1,0 +1,19 @@
+{% include 'SopinetTemplateSbadmin2Bundle:Emails:header.html.twig' %}
+
+<table>
+	<tr>
+		<td>Tiene {{ notifications|length }} nuevas notificaciones en su panel de Trazeo.</td>
+	</tr>
+	<tr>
+		<a href="http://trazeo.es/panel/">Ir a Trazeo</a>
+	</tr>
+</table>
+	{% for notification in notifications %}
+		<tr class="well">
+			<td width="20%">{{ notificaftion.Action }}</td>
+			<td><a href="{{ path(notification.Link)) }}"></a></td>
+		</tr>
+	{% endfor %}
+<table>
+
+{% include 'SopinetTemplateSbadmin2Bundle:Emails:footer.html.twig' %}

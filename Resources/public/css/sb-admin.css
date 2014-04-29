@@ -2,11 +2,19 @@
 
 /* ------------------------------- */
 
+@import url(http://fonts.googleapis.com/css?family=Asap:400,400italic,700,700italic);
+
+
  body {
     background-color: #f8f8f8;
     padding-top: 50px;
+	font-family:Asap;
 }
 
+table a {
+	
+	color:#3c763d !important;
+}
 a:hover {
 	text-decoration:none;
 }
@@ -292,6 +300,11 @@ table.dataTable thead .sorting:after {
     float: right;
     font-family: fontawesome;
     color: rgba(50,50,50,.5);
+}
+
+table th {
+	
+	border:none !important;
 }
 
 /* Circle Buttons */
