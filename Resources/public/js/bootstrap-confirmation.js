@@ -1,4 +1,22 @@
-<script >
+/* ===========================================================
+ * bootstrap-confirmation.js v1.0.1
+ * http://ethaizone.github.io/Bootstrap-Confirmation/
+ * ===========================================================
+ * Copyright 2013 Nimit Suwannagate <ethaizone@hotmail.com>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * =========================================================== */
+
 
 !function ($) {
 
@@ -58,6 +76,8 @@
 
 		, setContent: function () {
 				var $tip = this.tip()
+					, $btnOk = this.btnOk()
+					, $btnCancel = this.btnCancel()
 					, title = this.getTitle()
 					, href = this.getHref()
 					, target = this.getTarget()
@@ -68,13 +88,10 @@
 					, btnCancelLabel = this.getBtnCancelLabel()
 					, o = this.options
 
-				$tip.find('.popover-title').text(title);
+				$tip.find('.popover-title').text(title)
 
-				var btnOk = $tip.find('.popover-content > div > a:not([data-dismiss="confirmation"])');
-				var btnCancel = $tip.find('.popover-content > div > a[data-dismiss="confirmation"]');
-
-				btnOk.addClass(btnOkClass).html(btnOkLabel).attr('href', href).attr('target', target).on('click', o.onConfirm);
-				btnCancel.addClass(btnCancelClass).html(btnCancelLabel).on('click', o.onCancel);
+				$btnOk.addClass(btnOkClass).html(btnOkLabel).attr('href', href).attr('target', target).on('click', o.onConfirm)
+				$btnCancel.addClass(btnCancelClass).html(btnCancelLabel).on('click', o.onCancel)
 
 				$tip.removeClass('fade top bottom left right in')
 			}
@@ -161,6 +178,28 @@
 				return this.$tip
 			}
 
+		, btnOk: function () {
+				var $tip = this.tip()
+				return $tip.find('.popover-content > div > a:not([data-dismiss="confirmation"])')
+			}
+
+		, btnCancel: function () {
+				var $tip = this.tip()
+				return $tip.find('.popover-content > div > a[data-dismiss="confirmation"]')
+			}
+
+		, hide: function () {
+				var $btnOk = this.btnOk()
+					, $btnCancel = this.btnCancel()
+
+				$.fn.tooltip.Constructor.prototype.hide.call(this)
+
+				$btnOk.off('click')
+				$btnCancel.off('click')
+
+				return this
+			}
+
 		, destroy: function () {
 				this.hide().$element.off('.' + this.type).removeData(this.type)
 			}
@@ -193,21 +232,21 @@
 		, trigger: 'click'
 		, target : '_self'
 		, href   : '#'
-		, title: '{{ 'Confirmation.question'|trans }}'
+		, title: 'Are you sure?'
 		, template: '<div class="popover">' +
 				'<div class="arrow"></div>' +
 				'<h3 class="popover-title"></h3>' +
 				'<div class="popover-content text-center">' +
 				'<div class="btn-group">' +
-				'<a class="btn btn-small btn-danger" href="" target=""></a>' +
-				'<a class="btn btn-small text-muted" data-dismiss="confirmation"></a>' +
+				'<a class="btn btn-small" href="" target=""></a>' +
+				'<a class="btn btn-small" data-dismiss="confirmation"></a>' +
 				'</div>' +
 				'</div>' +
 				'</div>'
 		, btnOkClass:  'btn-primary'
 		, btnCancelClass:  ''
-		, btnOkLabel: '<i class="icon-ok-sign icon-white"></i> {{ 'Confirmation.yes'|trans }}'
-		, btnCancelLabel: '<i class="icon-remove-sign"></i> {{ 'Confirmation.no'|trans }}'
+		, btnOkLabel: '<i class="icon-ok-sign icon-white"></i> Yes'
+		, btnCancelLabel: '<i class="icon-remove-sign"></i> No'
 		, singleton: false
 		, popout: false
 		, onConfirm: function(){}
@@ -224,5 +263,3 @@
 	}
 
 }(window.jQuery);
-
-</script>
