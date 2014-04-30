@@ -2,18 +2,34 @@
 
 <table>
 	<tr>
-		<td>Tiene {{ notifications|length }} nuevas notificaciones en su panel de Trazeo.</td>
+		<td>Tiene nuevas notificaciones en su panel de Trazeo ({{ notifications|length }})</td>
 	</tr>
 	<tr>
-		<a href="http://trazeo.es/panel/">Ir a Trazeo</a>
+		<a href="http://dev.trazeo.es/panel">Ir a DevTrazeo</a>
 	</tr>
 </table>
-	{% for notification in notifications %}
-		<tr class="well">
-			<td width="20%">{{ notification.Action }}</td>
-			<td><a href="{{ path('panel_group') }}"></a></td>
-		</tr>
-	{% endfor %}
+
 <table>
+{% for notification in notifications %}
+	{% if loop.index is divisibleby(2) %}
+		{% set cebra = '#a3bc09' %}
+	{% else %}
+		{% set cebra = '#d4d4d4' %}
+	{% endif %}	
+	<tr style="background-color:{{ cebra }}">
+		{% if notification.action == 'group.join.let' %}
+			<td><b>{{ notification.user.user.username }}</b>, se ha aceptado su solicitud al grupo <b>{{ notification.objectsid }}(cambiar por nombre)</b>.</td>
+			<td width="20%"><button>Ir al grupo</button></td>
+		{% elseif notification.action == 'group.join.deny' %}
+			<td><b>{{ notification.user.user.username }}</b>, se ha denegado su solicitud al grupo <b>{{ notification.objectsid }}(cambiar por nombre)</b>.</td>
+			<td width="20%"><button>Ir al panel</button></td>
+		{% else %}
+			<td><b>{{ notification.user.user.username }}</b>, el usuario {{ notification.objectsid }}(filtrar email usuario) ha solicitado acceso al grupo <b>{{ notification.objectsid }}(cambiar por nombre)</b> del que eres administrador.</td>
+			<td width="20%"><button>Aceptar</button></td>
+			<td width="20%"><button>Denegar</button></td>
+		{% endif %}
+	</tr>
+{% endfor %}
+</table>
 
 {% include 'SopinetTemplateSbadmin2Bundle:Emails:footer.html.twig' %}
