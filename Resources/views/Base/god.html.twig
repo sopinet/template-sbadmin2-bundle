@@ -71,13 +71,13 @@
 				 		,onConfirm: function(){
 				 				$(location).attr('href',this.replace('replace',2));
 					 		}.bind(url)
-				 		,btnOkLabel:" oculto"
-					 	,btnOkClass:"fa fa-eye-slash"
+				 		,btnOkLabel:""
+					 	,btnOkClass:"btn btn-warning fa fa-eye-slash"
 						,onCancel:function(){
 								$(location).attr('href',this.replace('replace',1));	
 							}.bind(url)
-						,btnCancelLabel:" privado"
-						,btnCancelClass:"fa fa-lock"
+						,btnCancelLabel:""
+						,btnCancelClass:"btn btn-danger fa fa-lock"
 						},
 
 			 			{
@@ -86,13 +86,13 @@
 					 		,onConfirm: function(){
 					 				$(location).attr('href',this.replace('replace',2));	
 					 				}.bind(url)
-					 		,btnOkLabel:" oculto"
-						 	,btnOkClass:"fa fa-eye-slash"
+					 		,btnOkLabel:""
+						 	,btnOkClass:"btn btn-warning fa fa-eye-slash"
 							,onCancel:function(){
 									$(location).attr('href',this.replace('replace',0));							
 								}.bind(url)
-							,btnCancelLabel:" publico"
-							,btnCancelClass:"fa fa-unlock"
+							,btnCancelLabel:""
+							,btnCancelClass:"btn btn-success fa fa-unlock"
 						},
 
 			 			{
@@ -102,13 +102,13 @@
 					 			console.log(this);
 					 			$(location).attr('href',this.replace('replace',0));
 						 		}.bind(url)
-					 		,btnOkLabel:" publico"
-						 	,btnOkClass:"fa fa-unlock"
+					 		,btnOkLabel:""
+						 	,btnOkClass:"btn btn-success fa fa-unlock"
 							,onCancel:function(){
 								$(location).attr('href',this.replace('replace',1));								
 								}.bind(url)
-							,btnCancelLabel:" privado"
-							,btnCancelClass:"fa fa-lock"
+							,btnCancelLabel:""
+							,btnCancelClass:"btn btn-danger fa fa-lock"
 						}
 						];
 			var option=$('#'+$('[data-toggle="confirmationChange"]')[i].id).attr('groupVisibility');		
