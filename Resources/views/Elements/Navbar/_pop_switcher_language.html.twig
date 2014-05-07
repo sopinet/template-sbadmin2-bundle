@@ -1,0 +1,26 @@
+<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+	<img src="{{ asset("bundles/sopinettemplatesbadmin2/images/flags/"~current_locale~".png")}}"/>
+	{#<span class="badge badge-important">{{ notifications|length }}</span>#}
+</a>
+
+<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-closer">
+	{% for locale in locales %}
+	<li{% if current_locale == locale.locale %} class="locale_current"{% endif %}>
+		<a href="{{ locale.link }}">
+			<div class="clearfix">
+				<span class="pull-left">{{ locale.locale_current_language }}</span>
+				<span class="pull-right"><img src="{{ asset("bundles/sopinettemplatesbadmin2/images/flags/"~locale.locale~".png")}}"/></span>
+			</div>
+		</a>
+	</li>
+	{% endfor %}
+</ul>
+{#
+<ul class="locale_chooser">
+    {% for locale in locales %}
+        <li{% if current_locale == locale.locale %} class="locale_current"{% endif %}>
+            <a href="{{ locale.link }}" title="{{ locale.locale_current_language }}">{{ locale.locale_current_language }}</a>
+        </li>
+    {% endfor %}
+</ul>
+#}

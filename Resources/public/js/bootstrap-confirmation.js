@@ -243,8 +243,8 @@
 				'</div>' +
 				'</div>' +
 				'</div>'
-		, btnOkClass:  'btn-primary'
-		, btnCancelClass:  ''
+		, btnOkClass:  'btn-default'
+		, btnCancelClass:  'btn-success'
 		, btnOkLabel: '<i class="icon-ok-sign icon-white"></i> Yes'
 		, btnCancelLabel: '<i class="icon-remove-sign"></i> No'
 		, singleton: false
