@@ -5,6 +5,7 @@ $(function() {
 			 language: "es-ES"
 		 });
 		 
+	
 		 //Popover
 		 $("[data-toggle=popover]").popover({ trigger: "hover focus" });
 		 

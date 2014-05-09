@@ -15,7 +15,7 @@
 	{% endif %}	
 	<tr style="background-color:{{ cebra }}">
 		<td style="padding:6px;color:#333;">{{ notification|parseSopinetUserNotification() }}</td>
-		<td style="text-align:center;" width="20%">{% include 'SopinetTemplateSbadmin2Bundle:Emails:_customlink.html.twig' with {'url': "http://localhost"~notification.link, 'title': 'Ver'} %}</td>
+		<td style="text-align:center;" width="20%">{% include 'SopinetTemplateSbadmin2Bundle:Emails:_customlink.html.twig' with {'url':notification.link, 'title': 'Ver'} %}</td>
 	</tr>
 {% endfor %}
 </table>
