@@ -2,10 +2,12 @@ $(function() {
 
 		// Datepicker for input type 
 		 $('.inputDate').datepicker({
-			 language: "es-ES"
-		 });
+			language: 'es',
+			format: 'dd/mm/yyyy'
+		 	}).on('changeDate', function(ev){
+				    $(this).datepicker('hide');
+		 	  });
 		 
-	
 		 //Popover
 		 $("[data-toggle=popover]").popover({ trigger: "hover focus" });
 		 

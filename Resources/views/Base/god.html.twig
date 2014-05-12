@@ -60,8 +60,8 @@
 	%}
 	<script type="text/javascript" src="{{ asset_url }}"></script>
 	{% endjavascripts %}
-	
 	<script type="text/javascript">
+	
 		$('[data-toggle="confirmation"]').confirmation({popout: true, singleton: true});
 		for(var i=0;i<$('[data-toggle="confirmationChange"]').length;i++){
 			var url=$('#'+$('[data-toggle="confirmationChange"]')[i].id).attr('changeVisibility');
