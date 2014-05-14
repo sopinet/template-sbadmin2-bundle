@@ -61,6 +61,6 @@
 </form>
 </div>
 <div class="panel-footer">
-	<a href="{{ path('fos_user_registration_register') }}">¿No tienes cuenta?</a>
-	
-	<a class="pull-right" href="{{ path('fos_user_resetting_request') }}">¿Olvidaste la contraseña?</a>
+	<div><a href="{{ path('fos_user_registration_register') }}">{{ "Login.new"|trans }}</a></div>
+	<div><a href="{{ path('fos_user_resetting_request') }}">{{ "Login.forgot"|trans }}</a></div>
+</div>
