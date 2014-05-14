@@ -61,6 +61,18 @@
 </form>
 </div>
 <div class="panel-footer">
-	<div><a href="{{ path('fos_user_registration_register') }}">{{ "Login.new"|trans }}</a></div>
-	<div><a href="{{ path('fos_user_resetting_request') }}">{{ "Login.forgot"|trans }}</a></div>
+	<div><a class="btn btn-lg btn-success btn-register btn-block" href="{{ path('fos_user_registration_register') }}" id="register-link">{{ "Login.new"|trans }}</a></div>
 </div>
+<div><a class="forgot" href="{{ path('fos_user_resetting_request') }}" id="forgot-link">{{ "Login.forgot"|trans }}</a></div>
+
+<script type="çtext/javascript">
+	//Analytics Register link
+	var link = document.getElementById('register-link');
+	analytics.trackLink(link, 'register-link');
+
+	//Analytics Forgot link
+	var link = document.getElementById('forgot-link');
+	analytics.trackLink(link, 'forgot-link');
+
+
+</script>
