@@ -5,3 +5,8 @@
 {% include 'SopinetTemplateSbadmin2Bundle:Login:_form_login.html.twig' %}
 
 {% endblock fos_user_content %}
+
+{% block js %}
+{{ parent() }} 
+	{% include 'SopinetTemplateSbadmin2Bundle:Login:_login_analytics.html.twig' %}
+{% endblock %}

@@ -1,0 +1,14 @@
+<script type="text/javascript">
+	//Analytics Register user link 
+	$("#register-link").on('click.login.register',function(event){});
+	$( "#register-link").click(function () {
+	  $("#register-link").trigger("click.login.register");
+	}); 
+	analytics.track('click.login.register');
+	//Analytics Forgot password link 
+	$("#forgot-link").on('click.login.forgotPassword',function(event){});
+	$( "#forgot-link").click(function () {
+	  $("#forgot-link").trigger("click.login.forgotPassword");
+	}); 
+	analytics.track('click.login.forgotPassword');
+</script>
