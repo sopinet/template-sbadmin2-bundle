@@ -3,6 +3,7 @@ $(function() {
 		// Datepicker for input type 
 		 $('.inputDate').datepicker({
 			language: 'es',
+			orientation: 'auto top',
 			format: 'dd/mm/yyyy'
 		 	}).on('changeDate', function(ev){
 				    $(this).datepicker('hide');

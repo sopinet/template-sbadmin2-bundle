@@ -5,14 +5,35 @@ ul li{
 select { 
     border: none; 
 }
+
+#wrapper{
+	font-size:16px;	
+}
+
+#panel-logo {
+	
+	position:absolute;
+	margin-top: 60px;
+	margin-left: 45px;
+}
+
+#brand-logo {
+	
+	margin-top:-16px;
+	margin-left:12px;
+}
+
 .datepicker {
     position: relative !important;
     top: -450px !important;
 }
 
-#wrapper{
-	font-size:16px;	
+.page-header {
+	z-index:1;
+	background:url('../../../images/trazeito_big.png') no-repeat 90% 115%;
+	color:#666;
 }
+
 
 .btn-xs,.label{
 	font-size:14px;	
