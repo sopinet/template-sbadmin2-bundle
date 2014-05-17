@@ -1,0 +1,10 @@
+<script type="text/javascript">
+	//Analytics Register user form 
+	var form=document.getElementById('register_form');
+	analytics.trackForm(form,"send.register.register",function(){
+		analytics.identify($('#fos_user_registration_form_email').val(),
+				{email: $('#fos_user_registration_form_email').val(),
+			username: $('#fos_user_registration_form_username').val()
+			}
+		)});
+</script>

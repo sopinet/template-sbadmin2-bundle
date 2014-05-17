@@ -2,7 +2,7 @@
 	{% set csrf_token = render(controller('SopinetTemplateSbadmin2Bundle:Default:getToken')) %}
 {% endif %}
 
-<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register" role="form">
+<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register" id="register_form" role="form">
     {{ form_errors(form) }}
     <div class="form-group{% if form.email.vars.errors[0].message is defined %} has-error{% endif %}">
 		{{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Register.email'|trans}}) }}
