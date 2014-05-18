@@ -38,3 +38,13 @@ select {
 .btn-xs,.label{
 	font-size:14px;	
 }
+
+.trazeo-menu-mobile ul {
+	margin-left: 10px;
+}
+
+.trazeo-menu-mobile ul, .trazeo-menu-mobile ul li {
+	float: left !important;
+}
+
+body { padding-bottom: 70px; }

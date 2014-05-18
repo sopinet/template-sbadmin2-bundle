@@ -19,7 +19,7 @@
 
 {% block list %}
 {% if item.hasChildren and options.depth is not sameas(0) and item.displayChildren %}
-    <ul class="nav{% if options.depth < 2 %} nav-second-level collapse"{% else %}" id="side-menu"{% endif %}>
+    <ul class="nav navbar-nav{% if options.depth < 2 %} nav-second-level collapse"{% else %}"{% endif %}>
         {{ block('children') }}
     </ul>
 {% endif %}
