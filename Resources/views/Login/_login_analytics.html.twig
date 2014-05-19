@@ -1,8 +1,11 @@
 <script type="text/javascript">
+	sessionStorage.setItem('justLoged','false');
 	//Analytics Register user form 
 	var form=document.getElementById('login_form');
 	analytics.trackForm(form,"send.login.login",function(){
 		analytics.identify($('#username').val(),{username: $('#username').val()}
 		
-		)});
+		)
+		sessionStorage.setItem('justLoged','true');
+	});
 </script>

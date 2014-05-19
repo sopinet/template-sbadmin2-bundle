@@ -1,4 +1,5 @@
 <script type="text/javascript">
+	sessionStorage.setItem('justRegistered','false');
 	//Analytics Register user form 
 	var form=document.getElementById('register_form');
 	analytics.trackForm(form,"send.register.register",function(){
@@ -6,5 +7,7 @@
 				{email: $('#fos_user_registration_form_email').val(),
 			username: $('#fos_user_registration_form_username').val()
 			}
-		)});
+		)
+		sessionStorage.setItem('justRegistered','true');
+		});
 </script>
