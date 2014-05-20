@@ -2,7 +2,11 @@
 	{% include 'SopinetTemplateSbadmin2Bundle:Elements/Navbar:brand.html.twig' %}
 	<ul class="nav navbar-top-links navbar-right pull-right">
 		{% block add_navbar %}{% endblock %}	
-		{% include 'SopinetTemplateSbadmin2Bundle:Elements/Navbar:links.html.twig' %}
+		{% include 'SopinetTemplateSbadmin2Bundle:Elements/Navbar:links.html.twig' with {
+			'custom_link_1': custom_link_1,
+			'custom_text_1': custom_text_1,
+			'custom_icon_1': custom_icon_1 
+		} %}
 		{% include 'SopinetTemplateSbadmin2Bundle:Elements/Navbar:pop_language.html.twig' %}
 	</ul>
 </nav>
