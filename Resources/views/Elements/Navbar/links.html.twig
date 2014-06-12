@@ -10,7 +10,7 @@
                         </li>
                 		{%  if custom_link_1 is defined %}
                 			<li class="divider"></li>
-                        	<li><a href="{{ custom_link_1 }}"><i class="fa {{ custom_icon_1 }} fa-fw"></i> {{ custom_text_1 }}</a>
+                        	<li><a href="{{ custom_link_1 }}" {% if on_new_tab!=false %}target="_blank"{% endif %}><i class="fa {{ custom_icon_1 }} fa-fw"></i> {{ custom_text_1 }}</a>
                         	</li>                			
                 		{% endif %}
                         <li class="divider"></li>

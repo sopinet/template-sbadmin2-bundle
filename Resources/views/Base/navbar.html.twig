@@ -5,7 +5,8 @@
 		{% include 'SopinetTemplateSbadmin2Bundle:Elements/Navbar:links.html.twig' with {
 			'custom_link_1': custom_link_1,
 			'custom_text_1': custom_text_1,
-			'custom_icon_1': custom_icon_1 
+			'custom_icon_1': custom_icon_1,
+			'on_new_tab': on_new_tab|default(false) 
 		} %}
 		{% include 'SopinetTemplateSbadmin2Bundle:Elements/Navbar:pop_language.html.twig' %}
 	</ul>
