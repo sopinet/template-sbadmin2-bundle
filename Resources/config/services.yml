@@ -5,3 +5,10 @@ services:
 #    sopinet_template_sbadmin2.example:
 #        class: %sopinet_template_sbadmin2.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]
+
+services:
+    sopinettemplatesbadmin2.twig.base_extension:
+        class: Sopinet\Template\Sbadmin2Bundle\Twig\BaseExtension
+        arguments: ['@service_container']
+        tags:
+            - { name: twig.extension }
