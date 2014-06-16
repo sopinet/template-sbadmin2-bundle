@@ -1,0 +1,9 @@
+
+<script>
+$(document).ready(setTimeout(function(){
+	$('#fos_user_registration_form_username').val('mock');
+	$('#register_form').submit(function(){
+		$('#fos_user_registration_form_username').val($('#fos_user_registration_form_email').val());
+	})
+}),0.5);
+</script>
