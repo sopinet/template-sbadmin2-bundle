@@ -9,13 +9,14 @@
 <table>
 {% for notification in notifications %}
 	{% if loop.index is divisibleby(2) %}
-		{% set cebra = '#ccc' %}
+		{% set cebra = '#eeffee' %}
 	{% else %}
-		{% set cebra = '#eee' %}
+		{% set cebra = '#eeefee' %}
 	{% endif %}	
-	<tr style="background-color:{{ cebra }}">
+	{# <tr style="background-color:{{ cebra }}"> #}
+	<tr>
 		<td style="padding:6px;color:#333;">{{ notification|parseSopinetUserNotification() }}</td>
-		<td style="text-size: 120%; text-align:center;" width="20%">{% include 'SopinetTemplateSbadmin2Bundle:Emails:_customlink.html.twig' with {'url':notification.link, 'title': 'Ver'} %}</td>
+		<td style="font-size: 140%; text-align:center;" width="20%">{% include 'SopinetTemplateSbadmin2Bundle:Emails:_customlink.html.twig' with {'url':notification.link, 'title': 'Ver'} %}</td>
 	</tr>
 {% endfor %}
 </table>
