@@ -4,11 +4,19 @@
 
 <form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register" id="register_form" role="form">
     {{ form_errors(form) }}
-    <div class="form-group{% if form.email.vars.errors[0].message is defined %} has-error{% endif %}">
-		{{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Register.email'|trans}}) }}
-            {% if form.email.vars.errors[0].message is defined %}
+    <div class="form-group{% if form.email.first.vars.errors[0].message is defined %} has-error{% endif %}">
+		{{ form_widget(form.email.first, {'attr': {'class': 'form-control', 'placeholder': 'Register.email'|trans}}) }}
+            {% if form.email.first.vars.errors[0].message is defined %}
             <span class="help-block">
-                {{ form.email.vars.errors[0].message }}
+                {{ form.email.first.vars.errors[0].message }}
+            </span>
+        {% endif %}
+    </div>
+    <div class="form-group{% if form.email.second.vars.errors[0].message is defined %} has-error{% endif %}">
+        {{ form_widget(form.email.second, {'attr': {'class': 'form-control', 'placeholder': 'Register.emailconfirmation'|trans}}) }}
+            {% if form.email.second.vars.errors[0].message is defined %}
+            <span class="help-block">
+                {{ form.email.second.vars.errors[0].message }}
             </span>
         {% endif %}
     </div>
