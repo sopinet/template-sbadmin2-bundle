@@ -1,10 +1,30 @@
 <script type="text/javascript">
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function() {
+    	if((isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows())==null)return 'Desktop';
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
 	sessionStorage.setItem('justLoged','false');
 	//Analytics Register user form 
 	var form=document.getElementById('login_form');
 	analytics.trackForm(form,"send.login.login",function(){
-		analytics.identify($('#username').val(),{username: $('#username').val()}
-		
+		analytics.identify($('#username').val(),{username: $('#username').val(),mobile: isMobile.any()}		
 		)
 		sessionStorage.setItem('justLoged','true');
 	});
