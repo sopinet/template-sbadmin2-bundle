@@ -92,14 +92,15 @@ body { padding-bottom: 70px; }
 
 .catalog-item-description {
    	position: absolute;
-   	top: 70%;
+   	top: 66%;
     text-align: center;
     font-weight: 60;
+    font-size: 0.88em;
  }
 
  .catalog-item-title {
     position: absolute;
-    top: 62%; 
+    top: 61%; 
     text-align: center;
     font-weight: 900;
  }
