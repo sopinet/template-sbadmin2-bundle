@@ -51,10 +51,10 @@ body { padding-bottom: 70px; }
 
 .catalogItem {  
     background-repeat: no-repeat;
-    -webkit-background-size: 80% 58%,100%;          
-    -moz-background-size: 80% 58%,100%;          
-    -o-background-size: 80% 58%,100%;
-    background-size: 80% 58%,100%;  
+    -webkit-background-size: 75% 50%,100%;          
+    -moz-background-size: 75% 50%,100%;          
+    -o-background-size: 75% 50%,100%;
+    background-size: 75% 50%,100%;  
     background-position: center 2%; 
     min-height: 300px; 
     height:auto !important; 
@@ -92,7 +92,7 @@ body { padding-bottom: 70px; }
 
 .catalog-item-description {
    	position: absolute;
-   	top: 66%;
+   	top: 67%;
     text-align: center;
     font-weight: 60;
     font-size: 0.88em;
@@ -100,7 +100,7 @@ body { padding-bottom: 70px; }
 
  .catalog-item-title {
     position: absolute;
-    top: 59%; 
+    top: 61%; 
     text-align: center;
     font-weight: 900;
  }
@@ -109,15 +109,17 @@ body { padding-bottom: 70px; }
   font-size: 0.7em;
   margin-top: 2px;
   position: absolute;
+  text-align: center;
   left: 10%;
   top: 30%;
+  font-weight: 900;
  }
 
 .catalog-item-points2{
     font-weight: 900;
-    position: absolute;
-    left: 30%;
-    top: 10%;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
  @media only screen and (max-width: 320px) {
@@ -130,6 +132,10 @@ body { padding-bottom: 70px; }
 
      }
    .catalog-item-points {
+    font-size: 0.5em;
+    margin-top: 2px;
+    }
+   .catalog-item-points2 {
     font-size: 0.5em;
     margin-top: 2px;
     }
