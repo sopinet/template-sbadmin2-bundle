@@ -127,6 +127,19 @@ body { padding-bottom: 70px; }
     margin-right: 20%;
 }
 
+.trip-block{
+ max-width: 50%;
+}
+
+.popover.fade.right.in{
+    width: 40%;
+}
+.trip-block.custom{
+    background-color: white;
+    color: #333;
+    border-color: #CCC;
+}
+
  @media only screen and (max-width: 320px) {
 
    .catalog-item-description {

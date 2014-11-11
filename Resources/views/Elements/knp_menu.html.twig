@@ -80,7 +80,7 @@
 {% endblock %}
 
 {% block linkElement %}
-	<a {% if item.hasChildren %}href="#" class="dropdown-toggle" data-toggle="dropdown"{% else %}href="{{ item.uri }}" {{ _self.attributes(item.linkAttributes) }}{% endif %}>
+	<a {% if item.attribute('id') is not empty  %}id="{{ item.attribute('id') }}" {% endif %}{% if item.hasChildren %}href="#" class="dropdown-toggle" data-toggle="dropdown"{% else %}href="{{ item.uri }}" {{ _self.attributes(item.linkAttributes) }}{% endif %}>
 	    {% if item.attribute('icon') is not empty  %}
     	<i class="fa {{ item.attribute('icon') }}"></i>
     	{{ block('label') }}

@@ -1,0 +1,45 @@
+<!-- START Modal definition -->
+<div id="{{ modal.name }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="{{ modal.name }}"
+     aria-hidden="true"
+     style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button id="{{ modal.name }}_smallbtn_close" type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                            class="sr-only">{{ modal.close }}</span></button>
+                <h4 class="modal-title" id="{{ modal.name }}">{{ modal.title }}</h4>
+            </div>
+            {% if modal.body is defined%}
+                <div class="modal-body row col-md-12">
+                    <p>{{ modal.body |raw}}</p>
+                </div>
+            {% elseif modal.body_template is defined%}
+                <div class="modal-body row col-md-12">
+                  {% include modal.body_template with{parameters: modal.body_parameters} %}
+                </div>
+            {% endif %}
+            <div class="modal-footer">
+                <button id="{{ modal.name }}_btn_close" type="button" class="btn btn-default" data-dismiss="modal">{{ modal.close }}</button>
+            </div>
+
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- END Modal definition -->
+    <script>
+        //Link modal to a element onClick
+        {% if modal.linked is defined and modal.linked !='' %}
+            document.getElementById('{{ modal.linked }}').onclick=
+                function(){
+                    $('#'+'{{ modal.name }}').modal();
+                }
+            ;
+        {% endif %}
+        //Show modal after a while
+        {% if modal.popup is defined%}
+            setTimeout(function(){$('#'+'{{ modal.name }}').modal()},{{  modal.popup}});
+        {% endif %}
+    </script>

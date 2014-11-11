@@ -24,7 +24,7 @@ var isMobile = {
 	//Analytics Register user form 
 	var form=document.getElementById('login_form');
 	analytics.trackForm(form,"send.login.login",function(){
-		analytics.identify($('#username').val(),{username: $('#username').val(),mobile: isMobile.any()}		
+		analytics.identify($('#username').val(),{username: $('#username').val(),device: isMobile.any()}		
 		)
 		sessionStorage.setItem('justLoged','true');
 	});
