@@ -1,0 +1,62 @@
+{% include 'SopinetTemplateSbadmin2Bundle:Emails:header.html.twig' %}
+<table>
+    <tr>
+        <td>
+            Hola!
+        </td>
+    </tr>
+    <tr style="background-color:#fefffe">
+        <td>
+            <b>Gracias por registrarte en <a href="http://www.trazeo.es/?utm_source=alta&utm_campaign=correo_bienvenida">Trazeo</a>. Estamos muy contentos de poder ayudarte a que tus hijos/as caminen diariamente al colegio de forma sana, segura y sostenible.</b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <dl>
+                <dt>Ahora podrás:</dt>
+                <dd>- Unirte a un grupo de pedibús ya creado, o crear el tuyo.</dd>
+                <dd>- Sumar puntos cuando acompañes al grupo de niños o cuando tus hijos participen, y canjearlos por premios.</dd>
+                <dd>- Invitar a otros padres y madres amigos a unirse al grupo para organizaros entre todos.</dd>
+                <dd>- Visualizar el recorrido y/o recibir notificaciones de que los niños han llegado sin incidencias cuando no seas tú el que acompaña al grupo.</dd>
+            </dl>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Si vas a acompañar al grupo de niños o simplemente quieres empezar a sumar puntos por caminar acompañando a los tuyos antes de invitar a otros padres, necesitarás tener instalada la aplicación móvil. Si aún no la tienes, desde <a href="https://play.google.com/store/apps/details?id=com.sopinet.trazeo.app">aquí</a> podrás descargarla (por ahora disponible en versión Android).
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Si necesitas ayuda, contáctanos. Estamos deseando ayudarte, de verdad ;). Escríbenos un mail a <a href="mailto:hola@trazeo.es"> hola@trazeo.es</a>o déjanos un mensaje o tu teléfono para que te llamemos a través del formulario de <a href="http://trazeo.es/contacto/?utm_source=alta&utm_campaign=correo_bienvenida"><b>Contacto</b></a>. También puedes acceder a los manuales de uso de la app y la web desde <a href="http://www.trazeo.es/?utm_source=alta&utm_campaign=correo_bienvenida">www.trazeo.es</a> o déjanos un mensaje en la web.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Te queremos agradecer que hayas llegado hasta aquí. Para que puedas empezar pronto a canjear tus puntos por premios de nuestro catálogo, te regalamos <b>los primeros 50 puntos*.</b> Para sumarlos a tu cuenta, simplemente entra en la sección <a href="http://beta.trazeo.es/panel/point/?utm_source=alta&utm_campaign=correo_bienvenida"><b>Mis Puntos</b></a>, introduce este código exclusivo y pulsa el botón de “Canjea tu código”:</p>
+        </td>
+    </tr>
+    <tr>
+        <td style="font-weight: bold;text-align: center;">
+            <!-- CODIGO -->
+            {{exchange_code}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Nos vemos en el camino!
+                </br>Pedro, Rafa, Eva y Fernando
+                </br>Trazeo Caminos Escolares
+                </br><a href="http://www.trazeo.es/?utm_source=alta&utm_campaign=correo_bienvenida">trazeo.es</a></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p style="font-weight: bold; font-size: 0.7em">* Si eres socio de CiviClub.org, el club de las personas cívicas, puedes canjear este mismo código en su página para ganar también 50 CIVIS. Los puntos que vayas sumando en Trazeo también se transformarán en CIVIS cada semana. Las acciones cívicas y sostenibles así tienen doble premio (Es importante que estés registrado con el mismo email en las dos plataformas).
+            </p>
+        </td>
+    </tr>
+</table>
+{% include 'SopinetTemplateSbadmin2Bundle:Emails:footer.html.twig' %}

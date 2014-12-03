@@ -179,3 +179,47 @@ body { padding-bottom: 70px; }
     height: 220px;
   }
 }
+
+.row-offset-min{
+    margin-top: 4.16%;
+}
+
+.row-offset-1{
+    margin-top: 8.33%;
+}
+.row-offset-2{
+    margin-top: 16.66%;
+}
+.row-offset-3{
+    margin-top: 25%;
+}
+.row-offset-4{
+    margin-top: 33.33%;
+}
+
+.row-offset-5{
+    margin-top: 41.66%;
+}
+.row-offset-6{
+    margin-top: 50%;
+}
+.row-offset-7{
+    margin-top: 58.33%;
+}
+.row-offset-8{
+    margin-top: 66.66%;
+}
+
+.row-offset-9{
+    margin-top: 75%;
+}
+.row-offset-10{
+    margin-top: 83.33%;
+}
+.row-offset-11{
+    margin-top: 91.66%;
+}
+
+.row-offset-12{
+    margin-top: 100%;
+}
