@@ -1,5 +1,5 @@
 newuser:
-    hello: 'Hello!'
+    hello: 'Hola!'
     title: '<b>Gracias por registrarte en <a href="http://www.trazeo.es/?utm_source=alta&utm_campaign=correo_bienvenida">Trazeo</a>. Estamos muy contentos de poder ayudarte a que tus hijos/as caminen diariamente al colegio de forma sana, segura y sostenible.</b>'
     list1: 'Ahora podrás:'
     list2: '- Unirte a un grupo de pedibús ya creado, o crear el tuyo.'

@@ -1,5 +1,5 @@
 newuser:
-    hello: 'Hola!'
+    hello: 'Hello!'
     title: '<b>Thank you for signing up in <a href="http://www.trazeo.es/?utm_source=alta&utm_campaign=correo_bienvenida">Trazeo</a>. We are very happy to be able to help your children walk to school every day in a healthy, safe and sustainable way.</b>'
     list1: 'Now, you can:'
     List2: '- Join a group already created, or create your own.'
