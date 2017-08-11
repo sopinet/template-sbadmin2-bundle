@@ -10,3 +10,11 @@ newuser:
     text2: 'If you need help, contact us. Many of the doubts you may have at first can be solved directly, and we are looking forward to helping you, indeed;). Write us an email at <a href="mailto:hola@trazeo.es"> hola@trazeo.es</a> or leave us your telephone number so we can call you through the <a href="http://trazeo.es/contacto/?utm_source=alta&utm_campaign=correo_bienvenida"><b>Contact</b></a>. You can also access the manuals for using the app and the web from <a href="http://www.trazeo.es/?utm_source=alta&utm_campaign=correo_bienvenida">www.trazeo.es</a> or leave us a message on the web.'
     text3: 'Te queremos agradecer que hayas llegado hasta aquí. Para que puedas empezar pronto a canjear tus puntos por premios de nuestro catálogo, te regalamos <b>los primeros 50 puntos*.</b> Para sumarlos a tu cuenta, simplemente entra en la sección <a href="http://beta.trazeo.es/panel/point/?utm_source=alta&utm_campaign=correo_bienvenida"><b>Mis Puntos</b></a> de la web, introduce este código exclusivo y pulsa el botón de “Canjea tu código”:'
     text4: 'See you on the way! </br>The team of Trazeo Caminos Escolares</br> <a href="http://www.trazeo.es/?utm_source=alta&utm_campaign=correo_bienvenida">trazeo.es</a>'
+
+footer_email1: "Warning: This email is not spam. It has been sent to you because you have accepted it through the"
+footer_email2: ".<br/> <br/>According to the LOPD, we inform you that your personal data and e-mail address are part of a file, which is responsible for Trazeo, being the purpose of the file, sending communications about our products and / or services, as well as notifications or warnings.<br/> If you want to unsubscribe completely, do so through your "
+footer_email3: "You can also change the"
+footer_email4: "<br/>If you have any problems do not hesitate to contact us through<a href='mailto:hola@trazeo.es'>hola@trazeo.es</a>"
+terms: "Terms of Use"
+profile: 'Profile'
+preferences: "Trazeo's Preferences"

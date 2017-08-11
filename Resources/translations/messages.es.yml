@@ -10,3 +10,11 @@ newuser:
     text2: 'Si necesitas ayuda, contáctanos. Muchas de las dudas que puedes tener al principio te las podemos resolver directamente, y estamos deseando ayudarte, de verdad ;). Escríbenos un mail a <a href="mailto:hola@trazeo.es"> hola@trazeo.es</a>o déjanos tu teléfono para que te llamemos a través del formulario de <a href="http://trazeo.es/contacto/?utm_source=alta&utm_campaign=correo_bienvenida"><b>Contacto</b></a>. También puedes acceder a los manuales de uso de la app y la web desde <a href="http://www.trazeo.es/?utm_source=alta&utm_campaign=correo_bienvenida">www.trazeo.es</a> o dejarnos un mensaje en la web.'
     text3: 'We want to thank you for coming here. So that you can start to exchange your points for prizes in our catalog soon, we give you <b>the first 50 points*.</b> To add them to your account, simply enter the section <a href="http://beta.trazeo.es/panel/point/?utm_source=alta&utm_campaign=correo_bienvenida"><b>My points</b></a> of the website, enter this unique code and click the "Redeem your code" button:'
     text4: 'Nos vemos en el camino! </br>El equipo de Trazeo Caminos Escolares</br> <a href="http://www.trazeo.es/?utm_source=alta&utm_campaign=correo_bienvenida">trazeo.es</a>'
+
+footer_email1: "Aviso: este correo electrónico no es un spam. Le ha sido enviado porque usted lo ha aceptado a través de las"
+footer_email2: ".<br/><br/>De acuerdo con la LOPD, le informamos que sus datos personales y dirección de correo electrónico forman parte de un fichero, cuyo responsable es Trazeo, siendo la finalidad del fichero, el envío de comunicaciones sobre nuestros productos y/o servicios, así como de notificaciones o avisos.<br/>Si desea darse de baja completamente, hágalo a través de su"
+footer_email3: "si lo desea también puede cambiar las"
+footer_email4: "<br/>Si tiene algún problema no dude en contactar con nosotros a través de <a href='mailto:hola@trazeo.es'>hola@trazeo.es</a>"
+terms: "Condiciones de Uso"
+profile: 'Perfil'
+preferences: "Preferencias de Trazeo"
