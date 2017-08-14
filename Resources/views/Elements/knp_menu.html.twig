@@ -61,7 +61,7 @@
             {%- set attributes = attributes|merge({'class': classes|join(' ')}) %}
         {%- endif %}
         {# displaying the item #}
-        <li{{ _self.attributes(attributes) }}>
+        <li{{ _self.attributes(attributes) }} {% if item.attribute('tooltip') is not empty  %} rel="tooltip-right" title="{{ item.attribute('tooltip')|trans }}"{% endif %}>
             {%- if item.uri is not empty and (not item.current or options.currentAsLink) %}
                 {{ block('linkElement') }}
             {%- else %}
@@ -76,8 +76,22 @@
     {% endif %}
 {% endblock %}
 
-{% block linkElement %}<a href="{{ item.uri }}"{{ _self.attributes(item.linkAttributes) }}>{{ block('label') }}</a>{% endblock %}
+{% block linkElement %}
+    <a href="{{ item.uri }}"{{ _self.attributes(item.linkAttributes) }}>
+        {% if item.attribute('icon') is not empty  %}
+            <i style="width: 30px" class="fa {{ item.attribute('icon') }}"></i>
+        {% endif %}
+        {{ block('label') }}
+    </a>
+{% endblock %}
 
-{% block spanElement %}<span{{ _self.attributes(item.labelAttributes) }}>{{ block('label') }}</span>{% endblock %}
+{% block spanElement %}
+    <span{{ _self.attributes(item.labelAttributes) }}>
+        {% if item.attribute('icon') is not empty  %}
+            <i class="fa {{ item.attribute('icon') }}"></i>
+        {% endif %}
+        {{ block('label') }}
+    </span>
+{% endblock %}
 
 {% block label %}{% if options.allow_safe_labels and item.getExtra('safe_label', false) %}{{ item.label|raw }}{% else %}{{ item.label }}{% endif %}{% endblock %}
