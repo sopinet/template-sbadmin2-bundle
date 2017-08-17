@@ -223,3 +223,11 @@ body { padding-bottom: 70px; }
 .row-offset-12{
     margin-top: 100%;
 }
+
+.pull-left{
+    color: #78a31f;
+}
+
+.gray>a{
+    max-height: 50px;
+}
