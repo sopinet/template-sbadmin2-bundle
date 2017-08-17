@@ -51,6 +51,9 @@ a:hover {
 .navbar-fixed-top a, .trazeo-menu ul a {
 	color: #3c763d !important;
 }
+.trazeo-menu ul a:hover {
+    background-color: #EEE !important;
+}
 .trazeo-menu-pc ul li:first-child {
 	margin-top:10px;
 }
