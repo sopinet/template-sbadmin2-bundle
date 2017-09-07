@@ -2,6 +2,12 @@
 	{% set csrf_token = render(controller('SopinetTemplateSbadmin2Bundle:Default:getToken')) %}
 {% endif %}
 
+{% for flash_message in app.session.flashBag.get('warning') %}
+	<div class="alert alert-danger margin-top-20">
+		<p class="text-center">{{ flash_message }}</p>
+	</div>
+{% endfor %}
+
 <form action="{{ path("fos_user_security_check") }}" method="post" id="login_form">
 	<input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
 	
